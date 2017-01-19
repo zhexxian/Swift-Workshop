@@ -12,6 +12,15 @@
 		9B6C0ECA1E30706F003D9BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EC81E30706F003D9BD0 /* Main.storyboard */; };
 		9B6C0ECC1E30706F003D9BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0ECB1E30706F003D9BD0 /* Assets.xcassets */; };
 		9B6C0ECF1E30706F003D9BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0ECD1E30706F003D9BD0 /* LaunchScreen.storyboard */; };
+		9B6C0EEF1E3073A9003D9BD0 /* Meme 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EE61E3073A9003D9BD0 /* Meme 1.jpg */; };
+		9B6C0EF01E3073A9003D9BD0 /* Meme 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EE71E3073A9003D9BD0 /* Meme 2.jpg */; };
+		9B6C0EF11E3073A9003D9BD0 /* Meme 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EE81E3073A9003D9BD0 /* Meme 3.jpg */; };
+		9B6C0EF21E3073A9003D9BD0 /* Meme 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EE91E3073A9003D9BD0 /* Meme 4.jpg */; };
+		9B6C0EF31E3073A9003D9BD0 /* Meme 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EEA1E3073A9003D9BD0 /* Meme 5.jpg */; };
+		9B6C0EF41E3073A9003D9BD0 /* Meme 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EEB1E3073A9003D9BD0 /* Meme 6.jpg */; };
+		9B6C0EF51E3073A9003D9BD0 /* Meme 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EEC1E3073A9003D9BD0 /* Meme 7.jpg */; };
+		9B6C0EF61E3073A9003D9BD0 /* Meme 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0EED1E3073A9003D9BD0 /* Meme 8.jpg */; };
+		9B6C0EF71E3073A9003D9BD0 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C0EEE1E3073A9003D9BD0 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		9B6C0ECB1E30706F003D9BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6C0ECE1E30706F003D9BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6C0ED01E30706F003D9BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B6C0EE61E3073A9003D9BD0 /* Meme 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 1.jpg"; sourceTree = "<group>"; };
+		9B6C0EE71E3073A9003D9BD0 /* Meme 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 2.jpg"; sourceTree = "<group>"; };
+		9B6C0EE81E3073A9003D9BD0 /* Meme 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 3.jpg"; sourceTree = "<group>"; };
+		9B6C0EE91E3073A9003D9BD0 /* Meme 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 4.jpg"; sourceTree = "<group>"; };
+		9B6C0EEA1E3073A9003D9BD0 /* Meme 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 5.jpg"; sourceTree = "<group>"; };
+		9B6C0EEB1E3073A9003D9BD0 /* Meme 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 6.jpg"; sourceTree = "<group>"; };
+		9B6C0EEC1E3073A9003D9BD0 /* Meme 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 7.jpg"; sourceTree = "<group>"; };
+		9B6C0EED1E3073A9003D9BD0 /* Meme 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meme 8.jpg"; sourceTree = "<group>"; };
+		9B6C0EEE1E3073A9003D9BD0 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,15 @@
 				9B6C0ECB1E30706F003D9BD0 /* Assets.xcassets */,
 				9B6C0ECD1E30706F003D9BD0 /* LaunchScreen.storyboard */,
 				9B6C0ED01E30706F003D9BD0 /* Info.plist */,
+				9B6C0EE61E3073A9003D9BD0 /* Meme 1.jpg */,
+				9B6C0EE71E3073A9003D9BD0 /* Meme 2.jpg */,
+				9B6C0EE81E3073A9003D9BD0 /* Meme 3.jpg */,
+				9B6C0EE91E3073A9003D9BD0 /* Meme 4.jpg */,
+				9B6C0EEA1E3073A9003D9BD0 /* Meme 5.jpg */,
+				9B6C0EEB1E3073A9003D9BD0 /* Meme 6.jpg */,
+				9B6C0EEC1E3073A9003D9BD0 /* Meme 7.jpg */,
+				9B6C0EED1E3073A9003D9BD0 /* Meme 8.jpg */,
+				9B6C0EEE1E3073A9003D9BD0 /* Meme.swift */,
 			);
 			path = Meme;
 			sourceTree = "<group>";
@@ -125,8 +152,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6C0ECF1E30706F003D9BD0 /* LaunchScreen.storyboard in Resources */,
+				9B6C0EF21E3073A9003D9BD0 /* Meme 4.jpg in Resources */,
+				9B6C0EF31E3073A9003D9BD0 /* Meme 5.jpg in Resources */,
+				9B6C0EF61E3073A9003D9BD0 /* Meme 8.jpg in Resources */,
 				9B6C0ECC1E30706F003D9BD0 /* Assets.xcassets in Resources */,
+				9B6C0EF51E3073A9003D9BD0 /* Meme 7.jpg in Resources */,
+				9B6C0EF11E3073A9003D9BD0 /* Meme 3.jpg in Resources */,
+				9B6C0EEF1E3073A9003D9BD0 /* Meme 1.jpg in Resources */,
 				9B6C0ECA1E30706F003D9BD0 /* Main.storyboard in Resources */,
+				9B6C0EF01E3073A9003D9BD0 /* Meme 2.jpg in Resources */,
+				9B6C0EF41E3073A9003D9BD0 /* Meme 6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6C0EF71E3073A9003D9BD0 /* Meme.swift in Sources */,
 				9B6C0EC71E30706F003D9BD0 /* ViewController.swift in Sources */,
 				9B6C0EC51E30706F003D9BD0 /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +336,7 @@
 				9B6C0ED51E30706F003D9BD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

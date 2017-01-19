@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					9B6C0EA21E3054A0003D9BD0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JQ24V592V7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JQ24V592V7;
 				INFOPLIST_FILE = "Shoe Size Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Zhexxian.Shoe-Size-Converter";
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JQ24V592V7;
 				INFOPLIST_FILE = "Shoe Size Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Zhexxian.Shoe-Size-Converter";

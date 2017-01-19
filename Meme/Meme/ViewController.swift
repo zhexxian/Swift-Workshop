@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     func loadNextMeme(){
-        var memeIndex:Int = Int(arc4random_uniform(UInt32(8)))
+        var memeIndex:Int = Int(arc4random_uniform(UInt32(memeArray.count)))
         uiImageView.image = memeArray[memeIndex].image
         titleLabel.text = memeArray[memeIndex].title
 

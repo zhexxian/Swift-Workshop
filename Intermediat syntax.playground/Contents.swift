@@ -31,5 +31,27 @@ default: print ("x is neither")
     
 }
 
-// tuple, arrays, dictionaries
+//2. tuple, arrays, dictionaries
 
+var myTuple = (1, "hello")
+myTuple.0
+myTuple.1
+
+
+var myArray:[Int] = [1,15,23]
+myArray.append(123)
+myArray[3]
+myArray.insert(13, at: 0)
+
+var myDictionary:Dictionary<String, String> = ["key1":"value1", "key2":"value2"]
+myDictionary["key1"]
+
+
+//3. functions
+
+func prepareMeme(){
+}
+
+//4. class
+class myClass{
+}

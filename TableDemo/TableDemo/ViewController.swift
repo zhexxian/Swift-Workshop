@@ -12,28 +12,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
+    
+    func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return avengers.count
+    }
+    
+    var avengers = ["Thor", "Hulk", "Iron Man", "Captain America", "Black Widow"]
+    
+    func tableView( _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = avengers[indexPath.row]
+        return cell
+        
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 12
-    }
-    
-    func tableView( _ tableView: UITableView, cellForRowAt cellForRowAtIndexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Thor"
-        return cell
-    }
-
 
 }
 

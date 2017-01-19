@@ -39,4 +39,4 @@ var aToInt = Int(a)  //this is an optional, which gives nil, not error
 type(of:aToInt)
 type(of:aToInt!)
 
-//
+//6. lazy variables

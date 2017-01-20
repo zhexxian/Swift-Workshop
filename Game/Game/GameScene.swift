@@ -9,7 +9,15 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+//add bit mask
+struct PhysicsCategory{
+    static let None:UInt32 = 0
+    static let all:UInt32=UInt32.max
+    static let Monster:UInt32=0b1
+    static let Projectile:UInt32=0b10
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let player = SKSpriteNode(imageNamed: "player")
     
@@ -32,6 +40,16 @@ class GameScene: SKScene {
     func addMonster() {
         
         let monster = SKSpriteNode(imageNamed: "monster")
+        
+        monster.physicsBody=SKPhysicsBody(rectangleOf: monster.size)
+        
+        monster.physicsBody?.isDynamic=true
+        
+        monster.physicsBody?.categoryBitMask=PhysicsCategory.Monster
+        
+        monster.physicsBody?.contactTestBitMask=PhysicsCategory.Projectile
+        
+        monster.physicsBody?.collisionBitMask=PhysicsCategory.None
         
         let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
         
@@ -94,6 +112,18 @@ class GameScene: SKScene {
         }
         let touchLocation = touch.location(in: self) // Get the location of the touch
         let projectile = SKSpriteNode(imageNamed: "projectile")
+        
+        projectile.physicsBody=SKPhysicsBody(rectangleOf: projectile.size)
+        
+        projectile.physicsBody?.isDynamic=true
+        
+        projectile.physicsBody?.categoryBitMask=PhysicsCategory.Projectile
+        
+        projectile.physicsBody?.contactTestBitMask=PhysicsCategory.Monster
+        
+        projectile.physicsBody?.collisionBitMask=PhysicsCategory.None
+        
+        
         projectile.position = player.position
         let offset = touchLocation - projectile.position
         if (offset.x < 0) { return }

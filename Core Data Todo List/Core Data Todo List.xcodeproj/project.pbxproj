@@ -13,6 +13,7 @@
 		9B6C0F2D1E319F2A003D9BD0 /* Core_Data_Todo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C0F2B1E319F2A003D9BD0 /* Core_Data_Todo_List.xcdatamodeld */; };
 		9B6C0F2F1E319F2A003D9BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0F2E1E319F2A003D9BD0 /* Assets.xcassets */; };
 		9B6C0F321E319F2A003D9BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C0F301E319F2A003D9BD0 /* LaunchScreen.storyboard */; };
+		9B6C0F3A1E31A95D003D9BD0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C0F391E31A95D003D9BD0 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9B6C0F2E1E319F2A003D9BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6C0F311E319F2A003D9BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6C0F331E319F2A003D9BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B6C0F391E31A95D003D9BD0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9B6C0F301E319F2A003D9BD0 /* LaunchScreen.storyboard */,
 				9B6C0F331E319F2A003D9BD0 /* Info.plist */,
 				9B6C0F2B1E319F2A003D9BD0 /* Core_Data_Todo_List.xcdatamodeld */,
+				9B6C0F391E31A95D003D9BD0 /* AddTaskViewController.swift */,
 			);
 			path = "Core Data Todo List";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6C0F271E319F2A003D9BD0 /* ViewController.swift in Sources */,
+				9B6C0F3A1E31A95D003D9BD0 /* AddTaskViewController.swift in Sources */,
 				9B6C0F251E319F2A003D9BD0 /* AppDelegate.swift in Sources */,
 				9B6C0F2D1E319F2A003D9BD0 /* Core_Data_Todo_List.xcdatamodeld in Sources */,
 			);

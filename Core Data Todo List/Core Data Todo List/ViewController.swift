@@ -42,8 +42,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView( _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        cell.textLabel?.text = tasks[indexPath.row].name
+        let task = tasks[indexPath.row]
+        
+        if task.isImportant {
+            //press Ctrl + Cmd + Spacebar for emoji
+            cell.textLabel?.text = "😎 \(task.name!)"
+            //http://uicolor.xyz/#/hex-to-ui
+            cell.backgroundColor = UIColor(red:0.97, green:0.58, blue:0.69, alpha:1.0)
+        
+        }
+        else {
+        
+            cell.textLabel?.text = "😏 \(task.name!)"
+            cell.backgroundColor = UIColor.gray
+        
+        }
+        
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if editingStyle == .delete {
+        
+            let task = tasks[indexPath.row]
+            context.delete(task)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            do {
+                tasks = try context.fetch((Task.fetchRequest()))
+            }
+            catch {
+                print ("Fetching failed")
+            }
+        
+        }
+        
+        tableView.reloadData()
+        
     }
     
     func getData() {

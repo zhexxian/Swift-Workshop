@@ -15,6 +15,7 @@ struct PhysicsCategory{
     static let all:UInt32=UInt32.max
     static let Monster:UInt32=0b1
     static let Projectile:UInt32=0b10
+    
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -27,6 +28,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
         
+        physicsWorld.gravity = CGVector(dx:0, dy:0) // zero gravity
+        
+        physicsWorld.contactDelegate = self
+        
         self.addChild(player)
         
         
@@ -35,6 +40,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 [SKAction.run(addMonster),SKAction.wait(forDuration:1.0)]
             )
         ))
+        
+        let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
+    }
+    
+    func projectileDidCollideWithMonster(_ projectile:SKSpriteNode,monster:SKSpriteNode){
+        print("Hit")
+        projectile.removeFromParent()
+        monster.removeFromParent()
     }
     
     func addMonster() {
@@ -51,6 +66,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         monster.physicsBody?.collisionBitMask=PhysicsCategory.None
         
+        
+        
         let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
         
         monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
@@ -63,6 +80,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                                        duration: TimeInterval(actualDuration))
         
         let actionMoveDone = SKAction.removeFromParent()
+        
+        
         
         monster.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
@@ -113,7 +132,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let touchLocation = touch.location(in: self) // Get the location of the touch
         let projectile = SKSpriteNode(imageNamed: "projectile")
         
-        projectile.physicsBody=SKPhysicsBody(rectangleOf: projectile.size)
+        projectile.physicsBody=SKPhysicsBody(circleOfRadius: projectile.size.width/2)
         
         projectile.physicsBody?.isDynamic=true
         
@@ -122,6 +141,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         projectile.physicsBody?.contactTestBitMask=PhysicsCategory.Monster
         
         projectile.physicsBody?.collisionBitMask=PhysicsCategory.None
+        
+        projectile.physicsBody?.usesPreciseCollisionDetection = true
         
         
         projectile.position = player.position
@@ -137,6 +158,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let actionMove = SKAction.move(to: realDest, duration: 2.0)
         let actionMoveDone = SKAction.removeFromParent()
         projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
+        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -148,6 +170,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Called before each frame is rendered
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        // 1
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        // 2
+        if ((firstBody.categoryBitMask & PhysicsCategory.Monster != 0) &&
+            (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0)) {
+            // why no projectile
+            projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
+        }
+        
+    }
+    
     func random()->CGFloat{
         return CGFloat(Float(arc4random())/0xFFFFFFFF)
     }
@@ -155,6 +200,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func random(min:CGFloat, max:CGFloat)->CGFloat{
         return random()*(max-min)+min
     }
+
+    
 }
 
 func + (left: CGPoint, right: CGPoint) -> CGPoint {
